@@ -1,0 +1,21 @@
+---
+import type { Resource } from '../components/ResourceLinks.astro';
+import ResourceLinks from '../components/ResourceLinks.astro';
+import Layout from '../layouts/Layout.astro';
+
+const resources: Resource[] = [
+  {
+    title: 'Github Templates',
+    url: 'https://gist.github.com/alejandroslpz/dfcd6463fd5ad792acc3379648df5177',
+    description: 'Plantillas para issues y pull requests.',
+  },
+];
+---
+
+<Layout title="Alex Sánchez">
+  <main>
+    <section class="mx-auto max-w-xl px-4">
+      <ResourceLinks resources={resources} />
+    </section>
+  </main>
+</Layout>
