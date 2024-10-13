@@ -1,4 +1,6 @@
 ---
+import Image from 'astro/components/Image.astro';
+
 interface Props {
   title: string;
   color: string;
@@ -10,7 +12,7 @@ interface Props {
 const { url, title, color, textColor, icon } = Astro.props;
 ---
 
-<a href={url}>
+<a target="_blank" rel="noopener noreferrer" href={url} aria-label={title}>
   <div
     style=`background-color: ${color};`
     class:list={[
@@ -19,6 +21,16 @@ const { url, title, color, textColor, icon } = Astro.props;
     ]}
   >
     <div class="mr-4">
+      {
+        icon === 'devnightmares' && (
+          <Image
+            src="/src/assets/svg/jack_o_lantern.svg"
+            alt="Jack o' Lantern"
+            width="48"
+            height="48"
+          />
+        )
+      }
       {
         icon === 'linkedin' && (
           <svg
