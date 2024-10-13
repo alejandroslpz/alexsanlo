@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-import Avatar from '../assets/images/avatar.jpg';
 ---
 
 <header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
@@ -13,9 +12,11 @@ import Avatar from '../assets/images/avatar.jpg';
   </p>
   <div class="flex justify-center mt-8">
     <Image
-      src={Avatar}
+      src="https://firebasestorage.googleapis.com/v0/b/alejandroslpz-715be.appspot.com/o/avatar.webp?alt=media&token=6745b785-a6d4-4630-bf71-0b8ddb24e2ef"
       alt="Alex Sánchez"
-      class="w-64 rounded-xl"
+      class="rounded-xl"
+      width={256}
+      height={256}
       loading="lazy"
     />
   </div>

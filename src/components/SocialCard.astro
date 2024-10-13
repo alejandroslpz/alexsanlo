@@ -1,5 +1,6 @@
 ---
 import Image from 'astro/components/Image.astro';
+import JackOLantern from '../assets/svg/jack-o-lantern.svg';
 
 interface Props {
   title: string;
@@ -24,10 +25,11 @@ const { url, title, color, textColor, icon } = Astro.props;
       {
         icon === 'devnightmares' && (
           <Image
-            src="/src/assets/svg/jack_o_lantern.svg"
+            src="https://firebasestorage.googleapis.com/v0/b/alejandroslpz-715be.appspot.com/o/jack-o-lantern.svg?alt=media&token=4cd63fde-1196-419e-8e84-7fb4473309a4"
             alt="Jack o' Lantern"
             width="48"
             height="48"
+            loading="lazy"
           />
         )
       }
