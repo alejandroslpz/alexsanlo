@@ -1,8 +1,9 @@
 ---
 import { Image } from 'astro:assets';
+import alejandroImage from '../assets/alejandro.jpeg';
 ---
 
-<header class="py-8 px-4 mx-auto max-w-xl lg:py-16 lg:px-6">
+<header class="py-8 px-4 mx-auto max-w-xl lg:py-8 lg:px-6">
   <a href="/" class="block">
     <h1 class="text-4xl font-bold text-center text-white">Alex Sánchez 🚀</h1>
   </a>
@@ -12,11 +13,9 @@ import { Image } from 'astro:assets';
   </p>
   <div class="flex justify-center mt-8">
     <Image
-      src="https://firebasestorage.googleapis.com/v0/b/alejandroslpz-715be.appspot.com/o/avatar.webp?alt=media&token=6745b785-a6d4-4630-bf71-0b8ddb24e2ef"
+      src={alejandroImage}
       alt="Alex Sánchez"
       class="rounded-xl"
-      width={256}
-      height={256}
       loading="lazy"
     />
   </div>
